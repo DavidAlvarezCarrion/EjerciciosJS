@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+var divi
+var multi
+var resta
+var suma
+
+var num1= prompt("Indica un numero");
+var num2= prompt("Indica un segundo numero");
+
+var tipo=prompt("Indica tipo de operacion: suma, resta, divi, multi");
+
+if(tipo==="suma") {
+suma= parseInt(num1)+parseInt(num2);
+document.write("El resultado es "+ suma);
+
+}
+else if (tipo==="divi"){
+divi= parseInt(num1)/parseInt(num2);
+document.write("El resultado es "+ divi);
+
+}
+else if(tipo==="resta"){
+resta= parseInt(num1)-parseInt(num2);
+document.write("El resultado es "+ resta);
+
+}
+else if(tipo==="multi"){
+multi= parseInt(num1)*parseInt(num2);
+document.write("El resultado es "+ multi);
+
+}
+
+</script>
+</head>
+<body>
+	<p>hola</p>
+</body>
+</html>

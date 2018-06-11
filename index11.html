@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<script >
+
+function coste_alquiler_coche(){
+
+	var noches= document.getElementById("num_noches").value;
+			var c = noches*40;
+			if(noches>=7){
+				c-=50;
+			}else if(noches>=3){
+				c-=20;
+			}
+			
+		document.getElementById("resultadoAlquilerCoche").value = c;
+	}
+
+	</script>
+
+
+</head>
+<body>
+	<label>Introduzca el número de noches</label>
+	<input id="num_noches" type="text">
+	
+	<input onclick="coste_alquiler_coche()" value="calcular coste" type="button">
+	<br><br>
+
+	
+	<label>Coste alquiler coche: </label><input id="resultadoAlquilerCoche" type="text"><br>
+	
+</body>
+</html>
+
+
+

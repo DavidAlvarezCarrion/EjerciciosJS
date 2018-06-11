@@ -1,0 +1,76 @@
+body{
+
+	background-image: url("imagenes/fondo.jpg");
+	background-size:50%;
+	position:fixed;
+
+}
+
+h1{
+
+	text-align: center;
+	font-size: 60px;
+
+}
+
+label{
+
+font-size: 15px;
+font-weight: bold;
+margin-top: 5%;
+margin-bottom: 5%;
+
+}
+
+input{
+
+	margin-top: 3%;
+margin-bottom: 3%;
+
+}
+
+#form{
+	max-width: 50%;
+	float: left; 
+	margin-top:10%;
+
+}
+
+#cuadroizq{
+
+float: right;
+max-width: 10%;
+margin-top:5%;
+height: 15%;
+margin-right: 5%;
+border: solid #1B1919;
+background-color:#a9a9a9;
+
+}
+
+.imagen{
+
+	max-width: 70%;
+	display:block;
+	margin:auto;
+	
+}
+
+#footer{
+	text-align: center;
+	background-color:#a9a9a9;
+	float:right;
+	width: 100%;
+	height:20%;
+	margin-top:6%;
+}
+
+#busqueda{
+
+	height: 5%;
+	border: Solid #1B1919;
+	width: 5%;
+	background-color:#E8ECE7;
+	margin-top: 30%;
+
+}

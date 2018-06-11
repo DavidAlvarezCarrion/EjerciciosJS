@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <script>
+        
+    var parar= false;
+    function Play(){
+      var audio= document.getElementById("audio");
+      audio.loop=true;
+      audio.play()
+    }
+
+    function Pause(){
+      audio.pause();
+    }
+    
+    </script>
+    </head>
+    <body>
+        <div>
+    <h1>Audio</h1>
+       <button onclick="Play()">Play</button>  
+    
+      <button onclick="Pause()">Pausa</button> 
+
+     <audio id="audio" src="bestsong.mp3" type="audio/mp3"></audio> 
+            
+        </div>
+         
+    </body>
+
+</html>

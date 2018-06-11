@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+ var numSecreto = Math.round(Math.random()*5);
+        // * var numSecreto = 3;
+        var quieroJugar = true;
+        while(quieroJugar==true){
+            for(var i =0; i<=2; i++){
+                var numUsuario = prompt("pruebe un numero del 1 al 5");
+                if(numUsuario == numSecreto){
+                    alert("acertaste");
+                    break;
+                }else{
+                    alert("error, numero incorrecto");
+                }
+            }
+            quieroJugar = confirm("¿Quieres jugar de nuevo?");
+        }
+        alert("saliendo del juego");
+
+</script>
+</head>
+<body>
+	<p>hola</p>
+</body>
+</html>

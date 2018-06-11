@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<link href="style.css"
+      rel="stylesheet" type="text/css">
+
+	<script >
+		function coste_hotel(numNoches){
+			var resultado = 140*numNoches;
+			return resultado;
+		}
+
+
+		function coste_avion(destino, n_noches){
+			var c = 0;
+			if(destino=="Oviedo"){
+				c = 325;
+			}else if(destino=="Tokyo"){
+				c = 1200;
+			}else if(destino=="Madrid"){
+				c = 200;
+			}else if(destino=="Barcelona"){
+				c = 150;
+			}
+			if(n_noches>3){
+				c = c*0.1;
+			}
+			return c;
+		}
+
+		
+function calcular_coste(){
+	var num_noches = document.getElementById("num_noches").value;
+
+	var destino = document.getElementById("nombreCiudad").value;
+
+	var resultado1 = coste_hotel(num_noches);
+
+	var resultado2 = coste_avion(destino, num_noches);
+
+	var resultado3 = coste_alquiler_coche(num_noches)
+
+	document.getElementById("resultadoHotel").value = resultado1;
+
+	document.getElementById("resultadoViaje").value = resultado2;
+
+	document.getElementById("resultadoAlquilerCoche").value = resultado3;
+
+	document.getElementById("result").value = resultado1+resultado2+resultado3;
+}
+		function coste_alquiler_coche(n){
+			var valorDevuelto = n*40;
+			if(n>=7){
+				valorDevuelto-=50;
+			}else if(n>=3){
+				valorDevuelto-=20
+			}
+			return valorDevuelto;
+		}
+
+
+	</script>
+
+
+</head>
+
+<body>
+
+	<h1>AGENCIA DE VIAJES EL CORTE CHINO</h1>
+
+<div id="form">
+
+	<label>Introduzca el número de noches</label>
+
+	<input id="num_noches" type="text">
+
+	<select id="nombreCiudad">
+		<option selected="selected" value="Oviedo">Oviedo</option>
+		<option value="Tokyo">Tokyo</option>
+		<option value="Madrid">Madrid</option>
+		<option value="Barcelona">Barcelona</option>
+	</select>
+
+	<input onclick="calcular_coste()" value="calcular coste" type="button">
+	<br><br>
+
+	<label>Coste hotel: </label><input id="resultadoHotel" type="text" disabled> <br>
+	<label>Coste viaje: </label><input id="resultadoViaje" type="text" disabled> <br>
+	<label>Coste alquiler coche: </label><input id="resultadoAlquilerCoche" type="text" disabled><br>
+	<label>Coste total:</label><input id="result" type="text" disabled><br>
+</div>
+
+<div id="cuadroizq">
+	<p text align="center"> <b>¿Quienes somos?</b>
+	<img src="imagenes/lateral.jpg" class="imagen">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate nec libero et auctor. Donec nec pellentesque eros. Quisque posuere maximus est vel volutpat. Morbi volutpat, enim id congue bibendum, odio est vulputate ante, sit amet sollicitudin nunc ipsum id tortor. Suspendisse rhoncus venenatis rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet fermentum mauris. Sed lacinia aliquam mi, vitae blandit diam efficitur in. Curabitur in augue leo. Vivamus scelerisque mollis neque.</p>
+
+</div> 
+
+<div id="busqueda">
+<p><b>Otros Buscadores:</b></p>
+<a href="https://www.booking.com/index.es.html?aid=376371;label=es-JCB2UqznXtCO_RDP_nj5CAS267778198069%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap1t1%3Aneg%3Afi%3Atikwd-65526620%3Alp1005508%3Ali%3Adec%3Adm;sid=6e5573e9c4058bff45b319626b01f8a6;keep_landing=1;redirected=1;source=country&gclid=EAIaIQobChMIsfT9t9e52wIVyJkbCh1HugpvEAAYASAAEgI8hPD_BwE&">Booking</a></br>
+<a href="http://www.baratos-vuelos.es/?gclid=EAIaIQobChMIu6Soute52wIVCzwbCh1CKQ8qEAAYASAAEgJSrfD_BwE&gclsrc=aw.ds&dclid=CNuJprvXudsCFcqnUQoduvwJnA">Kayak</a></br>
+<a href="https://www.tripadvisor.es/">TripAdvisor</a>
+
+</div>
+
+<div id="footer">
+<h4>
+	@Copyright El Corte Chino
+</h4>
+</div>
+
+</body>
+
+
+
+</html>

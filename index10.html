@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<script type="text/javascript">
+		function coste_hotel(numNoches){
+			var resultado = 140*numNoches;
+			return resultado;
+		}
+
+
+		function coste_avion(destino, n_noches){
+			var c = 0;
+			if(destino=="Oviedo"){
+				c = 325;
+			}else if(destino=="Tokyo"){
+				c = 1200;
+			}else if(destino=="Madrid"){
+				c = 200;
+			}else if(destino=="Barcelona"){
+				c = 150;
+			}
+			if(n_noches>3){
+				c = c*0.1;
+			}
+			return c;
+		}
+
+		
+function calcular_coste(){
+	var num_noches = document.getElementById("num_noches").value;
+	var destino = document.getElementById("nombreCiudad").value;
+	var resultado1 = coste_hotel(num_noches);
+	var resultado2 = coste_avion(destino, num_noches);
+
+	document.getElementById("result").value = resultado1+resultado2;
+}
+
+	
+
+	</script>
+
+
+</head>
+
+<body>
+
+	<label>Introduzca el número de noches</label>
+	<input id="num_noches" type="text">
+	<select id="nombreCiudad">
+		<option selected="selected" value="Oviedo">Oviedo</option>
+		<option value="Tokyo">Tokyo</option>
+		<option value="Madrid">Madrid</option>
+		<option value="Barcelona">Barcelona</option>
+	</select>
+
+	<input onclick="calcular_coste()" value="calcular coste" type="button">
+	<br><br>
+
+	<input id="result" type="text">
+
+</body>
+</html>
